@@ -87,6 +87,16 @@ async function fetchData() {
 
     const data = await res.json();
 
+    // Handle authentication or other API errors gracefully
+    if (!res.ok || !data.records) {
+      if (res.status === 401) {
+        throw new Error("Unauthorized (401): Please restore your Airtable API Key in app.js. (Make sure not to push it to GitHub!)");
+      } else if (res.status === 404) {
+        throw new Error("Not Found (404): Please check your Airtable Base ID and Table Name.");
+      }
+      throw new Error(data.error?.message || "Failed to fetch data from Airtable.");
+    }
+
     // 🔥 Clean mapping (IMPORTANT)
     dataStore = data.records.map((r) => ({
       slno: r.fields["SL.NO"] || 0,
