@@ -68,7 +68,7 @@ document
   .addEventListener("click", downloadExcel);
 
 // 🔐 Replace these
-const API_KEY = "YOUR_AIRTABLE_PAT";
+const API_KEY = "patiwJ4wkDN5iItCl.2aa7e34501644898758f8cecc6952ed8b39f53b2dceff71afcf315c7386c2844";
 const BASE_ID = "appOg1CuLa96HTpbQ";
 const TABLE_NAME = "meal_ingredients";
 
