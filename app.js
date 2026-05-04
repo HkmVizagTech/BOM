@@ -127,13 +127,9 @@ function downloadPdf() {
 document.getElementById("downloadPdf").addEventListener("click", downloadPdf);
 
 // 🔐 Replace these
-<<<<<<< HEAD
-const API_KEY = "patiwJ4wkDN5iItCl.2aa7e34501644898758f8cecc6952ed8b39f53b2dceff71afcf315c7386c2844";
-=======
 const API_KEY =
   "patiwJ4wkDN5iItCl.2aa7e34501644898758f8cecc6952ed8b39f53b2dceff71afcf315c7386c2844";
 // const API_KEY = "YOUR_AIRTABLE_PAT";
->>>>>>> 6ff44d7 (v1.3 - 3 dicimal and PDF)
 const BASE_ID = "appOg1CuLa96HTpbQ";
 const TABLE_NAME = "meal_ingredients";
 
